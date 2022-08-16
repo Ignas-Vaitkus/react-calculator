@@ -1,8 +1,8 @@
-## Song list app
+## Calculator app
 
 ### Introduction
 
-A simple calculator. More operation might be added over time. The project was done using [React](https://reactjs.org/) library.
+A simple calculator with component styling. The project was done using [React](https://reactjs.org/) library.
 
 ### Manual
 
