@@ -60,6 +60,29 @@ const App = () => {
     });
   };
 
+  const equalsClickHandler = () => {
+    if (calc.sign && calc.num) {
+      const math = (a, b, sign) =>
+        sign === "+"
+          ? a + b
+          : sign === "-"
+          ? a - b
+          : sign === "X"
+          ? a * b
+          : a / b;
+  
+      setCalc({
+        ...calc,
+        res:
+          calc.num === "0" && calc.sign === "/"
+            ? "Can't divide with 0"
+            : math(Number(calc.res), Number(calc.num), calc.sign),
+        sign: "",
+        num: 0,
+      });
+    }
+  };
+
   return (
     <Wrapper>
       <Screen value="0" />
