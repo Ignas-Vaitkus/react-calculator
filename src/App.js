@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import Screen from "./Components/Screen/Screen";
 import ButtonBox from "./Components/ButtonBox/ButtonBox";
@@ -6,11 +7,35 @@ import Button from "./Components/Button/Button";
 const App = () => {
   const btnValues = [
     ["C", "+-", "%", "/"],
-    [7, 8, 9, "X"],
+    [7, 8, 9, "×"],
     [4, 5, 6, "-"],
     [1, 2, 3, "+"],
     [0, ".", "="],
   ];
+
+  let [calc, setCalc] = useState({
+    sign: "",
+    num: 0,
+    res: 0,
+  });
+
+  const numClickHandler = (e) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+
+    if (calc.num.length < 16) {
+      setCalc({
+        ...calc,
+        num:
+          calc.num === 0 && value === "0"
+            ? "0"
+            : calc.num % 1 === 0
+            ? Number(calc.num + value)
+            : calc.num + value,
+        res: !calc.sign ? 0 : calc.res,
+      });
+    }
+  };
 
   return (
     <Wrapper>
