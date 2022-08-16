@@ -71,7 +71,7 @@ const App = () => {
           ? a + b
           : sign === "-"
           ? a - b
-          : sign === "X"
+          : sign === "×"
           ? a * b
           : a / b;
 
