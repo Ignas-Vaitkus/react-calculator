@@ -6,7 +6,7 @@ A simple calculator with component styling. The project was done using [React](h
 
 ### Manual
 
-Note: You will need [Node Package Manager (NPM)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) [Node.js](https://nodejs.org/en/) v16.16.0 to run this app.
+Note: You will need [Node Package Manager (NPM)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) [Node.js](https://nodejs.org/en/) v16.16.0 or higher is recommended to run this app.
 
 First install the react library to the project directory with the command:
 
